@@ -5,8 +5,8 @@
   "scripts": {
     "start": "node index.js",
     "server": "nodemon index.js",
-    "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
+    "migrate": "knex migrate:latest",
     "seed": "knex seed:run",
     "resetdb": "npm run rollback && npm run migrate && npm run seed",
     "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent"
@@ -17,6 +17,7 @@
   },
   "license": "ISC",
   "devDependencies": {
+    "@types/jest": "^27.4.0",
     "cross-env": "7.0.3",
     "eslint": "8.4.1",
     "jest": "27.4.3",
